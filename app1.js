@@ -23,7 +23,7 @@ buttons.forEach(function (item) {
         let currentBtn = item
         let tabId = currentBtn.getAttribute('data-tab')
         let currentTab = document.querySelector(tabId)
-        if ( ! currentBtn.classList.contains('active')){
+        if (!currentBtn.classList.contains('active')) {
             buttons.forEach(function (item) {
                 item.classList.remove('active')
             })
@@ -33,7 +33,18 @@ buttons.forEach(function (item) {
             currentBtn.classList.add('active')
             currentTab.classList.add('tab_active')
         }
-        
+
     })
 })
 document.querySelector('.btn__tabs').click()
+
+
+
+const btnBurger = document.querySelector('.menu-burger')
+const menuNavBurger = document.querySelector('.menu-nav-burger')
+const body = document.body
+btnBurger.addEventListener('click', () => {
+    menuNavBurger.classList.toggle('menu-nav-burger__active')
+    body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+    btnBurger.style.color = btnBurger.style.color === 'var(--bgMainDark)' ? '' : 'var(--bgMainDark)'
+})
