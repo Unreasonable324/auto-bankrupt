@@ -1523,7 +1523,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .platform-item__text {
-    padding: 0;
+    padding: 10px;
   }
 }
 
