@@ -35,7 +35,8 @@ ul {
   margin: 47px auto;
   padding: 0 12px;
 }
-.container-manual{
+
+.container-manual {
   padding-bottom: 25px;
 }
 
@@ -266,6 +267,7 @@ input[type=range]::-webkit-slider-thumb {
 .tab:nth-child(4) .tabs-column-left {
   margin-bottom: 21px;
 }
+
 .tab:nth-child(3) .tabs-column-left {
   margin-bottom: 42px;
 }
@@ -867,7 +869,10 @@ input[type=range]::-webkit-slider-thumb {
   text-decoration: none;
   color: var(--bodyTxt);
 }
-.sectionOneMobile{display: none;}
+
+.sectionOneMobile {
+  display: none;
+}
 
 @media (max-width:1180px) {
 
@@ -902,6 +907,7 @@ input[type=range]::-webkit-slider-thumb {
   .features-wrapper {
     column-width: auto;
   }
+
   .tab:nth-child(1) .tabs-column-left {
     margin-bottom: 0px;
   }
@@ -919,9 +925,11 @@ input[type=range]::-webkit-slider-thumb {
   .tabs-column-right {
     width: 48%;
   }
-  .tab:nth-child(4) .tabs-column-left p{
+
+  .tab:nth-child(4) .tabs-column-left p {
     margin-bottom: 10px;
   }
+
   .tab:nth-child(4) .tabs-column-left .tabs__item {
     width: 50%;
   }
@@ -962,9 +970,10 @@ input[type=range]::-webkit-slider-thumb {
   .missons-item {
     width: 24%;
   }
+
   .tab:nth-child(3) .tabs-column-left {
     margin-bottom: 24px;
-}
+  }
 }
 
 @media (max-width: 926px) {
@@ -1336,8 +1345,12 @@ input[type=range]::-webkit-slider-thumb {
   .foot-footer-column p {
     margin: 17px auto;
   }
-  .sectionOne{display:none;}
-  .sectionOneMobile{
+
+  .sectionOne {
+    display: none;
+  }
+
+  .sectionOneMobile {
     /* margin-top: 10px; */
     margin: 10px auto;
     display: block;
@@ -1435,7 +1448,8 @@ input[type=range]::-webkit-slider-thumb {
   .head-footer-column {
     margin: auto 50px;
   }
-  .sectionOneMobile{
+
+  .sectionOneMobile {
     width: 100%;
   }
 }
@@ -1507,9 +1521,10 @@ input[type=range]::-webkit-slider-thumb {
   .btnCall span:nth-child(5):before {
     top: -118%;
   }
+
   .platform-item__text {
-    padding: 0 ;
-}
+    padding: 0;
+  }
 }
 
 @media(max-width:414px) {
@@ -1602,6 +1617,13 @@ input[type=range]::-webkit-slider-thumb {
   .manual-item:nth-child(2) {
     transform: translate(0, -19%);
   }
+
+  .tab:nth-child(3) .tabs-column-left .tabs__item,
+  .tab:nth-child(4) .tabs-column-left .tabs__item {
+    width: 100%;
+  }
+
+
 }
 
 @media(max-width:375px) {
