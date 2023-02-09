@@ -1,23 +1,47 @@
 function lel() {
     var inputRanre = document.querySelector('.range')
-    console.log(inputRanre.value);
     var sliderLine = document.querySelector('.slider-line')
-    var sliderLineWidth =sliderLine.offsetWidth
-    var sliderLineWidthAll = widthImg *100
-    console.log(sliderLineWidthAll);
-    console.log(sliderLineWidth);
-    // console.log(sliderLine);
-    var widthImg = document.querySelectorAll('.slider-line img').length *120/100
-    
-    var widthImgs = widthImg *inputRanre.value
-    console.log(widthImgs);
-    console.log(widthImg);
-    if (widthImgs>= 1430){
-        widthImgs=1430
-    }
-    sliderLine.style.transform = "translateX(" + (-widthImgs) + "px)"
-    
+    var sliderLineWidth = sliderLine.offsetWidth //730
+    var countImg = document.querySelectorAll('.slider-line img').length //18
+    var imgWidth = document.querySelector('.slider-line img').offsetWidth + 20 // 100
+    var imgsWidth = imgWidth * countImg //2160
+    var errorSlider = imgsWidth - sliderLineWidth//1430
+    var onePercent = errorSlider / 100 //14.3
+    var inputValue = onePercent * inputRanre.value
 
-    // var img = document.querySelector('.btn')
-    // img.style.height = inputRanre.value + 'px'
+    sliderLine.style.transform = "translateX(" + (-inputValue) + "px)"
 }
+
+const buttons = document.querySelectorAll('.btn__tabs')
+const tabsItem = document.querySelectorAll('.tab')
+buttons.forEach(function (item) {
+    item.addEventListener('click', function () {
+        let currentBtn = item
+        let tabId = currentBtn.getAttribute('data-tab')
+        let currentTab = document.querySelector(tabId)
+        if (!currentBtn.classList.contains('active')) {
+            buttons.forEach(function (item) {
+                item.classList.remove('active')
+            })
+            tabsItem.forEach(function (item) {
+                item.classList.remove('tab_active')
+            })
+            currentBtn.classList.add('active')
+            currentTab.classList.add('tab_active')
+        }
+
+    })
+})
+document.querySelector('.btn__tabs').click()
+
+
+
+const btnBurger = document.querySelector('.menu-burger')
+const menuNavBurger = document.querySelector('.menu-nav-burger')
+const body = document.body
+
+btnBurger.addEventListener('click', () => {
+    menuNavBurger.classList.toggle('menu-nav-burger__active')
+    body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+    btnBurger.style.color = btnBurger.style.color === 'var(--bgMainDark)' ? '' : 'var(--bgMainDark)'
+})
