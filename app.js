@@ -38,10 +38,19 @@ document.querySelector('.btn__tabs').click()
 
 const btnBurger = document.querySelector('.menu-burger')
 const menuNavBurger = document.querySelector('.menu-nav-burger')
+const anchor = document.querySelectorAll('.menu-nav-burger a')
 const body = document.body
 
 btnBurger.addEventListener('click', () => {
+    console.log(anchor);
     menuNavBurger.classList.toggle('menu-nav-burger__active')
     body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
     btnBurger.style.color = btnBurger.style.color === 'var(--bgMainDark)' ? '' : 'var(--bgMainDark)'
 })
+ anchor.forEach(function(anchorItem){
+    anchorItem.addEventListener('click', () =>{
+        menuNavBurger.classList.remove('menu-nav-burger__active')
+    body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+    btnBurger.style.color = btnBurger.style.color === 'var(--bgMainDark)' ? '' : 'var(--bgMainDark)'
+    })
+ })
